@@ -1,0 +1,153 @@
+body {
+    background: #13293d; /* Dark blue */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Transparent white */
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+h2, label, p {
+    color: #ffffff; /* White */
+    margin: 8px 0;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #ffffff; /* White */
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    color: #ffffff; /* White */
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #4f93ce; /* Light blue */
+}
+
+#buttons-container {
+    margin-top: 20px;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+button {
+    background: #4f93ce; /* Light blue */
+    color: #ffffff; /* White */
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 10px 0; /* Add margin to the top */
+    width: 150px; /* Increase button width */
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+button {
+    background: #4f93ce; /* Light blue */
+    color: #ffffff; /* White */
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 10px 0; /* Add margin to the top */
+    width: 150px; /* Increase button width */
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+#weatherResult {
+    position: relative;
+    margin-top: 50px; /* Add margin to the top */
+}
+
+
+button:hover {
+    background: #3672a3; /* Slightly darker blue */
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#weather-info {
+    font-size: 20px;
+    position: sticky; /* Ensure relative positioning for z-index */
+    z-index: 0; /* Ensure weather content appears below buttons */
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    animation: slideIn 1s ease-in-out;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: #ffffff; /* White */
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #ffffff; /* White */
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
